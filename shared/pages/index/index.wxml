@@ -1,0 +1,118 @@
+<view class="page">
+  <view class="bg-orb orb-a"></view>
+  <view class="bg-orb orb-b"></view>
+
+  <view class="header">
+    <view class="header-top">
+      <view class="pill">集卡抽奖 v1.0</view>
+      <view class="pill pill--soft">{{statusLabel}}</view>
+    </view>
+    <view class="title-wrap">
+      <text class="eyebrow">Campaign UI</text>
+      <text class="title">互动玩法类</text>
+      <text class="title title--accent">集卡抽奖运营设计</text>
+    </view>
+    <view class="hero-stats">
+      <view class="stat" wx:for="{{heroStats}}" wx:key="label">
+        <text class="stat-value">{{item.value}}</text>
+        <text class="stat-label">{{item.label}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="section-head">
+    <text class="section-title">手机活动卡片</text>
+    <text class="section-desc">点击按钮后会模拟次数、进度和积分变化。</text>
+  </view>
+
+  <scroll-view scroll-y class="card-list">
+    <view class="card card--warm">
+      <text class="card-badge">618 Campaign</text>
+      <text class="card-title">快乐集卡 赢 1888 元</text>
+      <text class="card-desc">盲盒抽卡、签到加速、大奖触发，强化活动节奏和按钮冲动感。</text>
+      <view class="info-row">
+        <view class="info-chip">剩余次数 <text class="info-value">{{cards[0].tries}}</text></view>
+        <view class="info-chip">幸运值 <text class="info-value">{{cards[0].luck}}</text></view>
+      </view>
+      <view class="chip-row">
+        <text class="result-chip">{{cards[0].chip}}</text>
+      </view>
+      <button class="action-btn" data-index="0" bindtap="onActionTap">立即抽卡</button>
+    </view>
+
+    <view class="card card--pearl">
+      <text class="card-badge">Festival Series</text>
+      <text class="card-title">五福和 TA 的朋友们</text>
+      <text class="card-desc">漂浮卡面、角色插画和高亮按钮，适合春节、周年庆和品牌联动玩法。</text>
+      <view class="info-row">
+        <view class="info-chip">福卡进度 <text class="info-value">{{cards[1].progress}}</text></view>
+        <view class="info-chip">好友助力 <text class="info-value">{{cards[1].assist}}</text></view>
+      </view>
+      <view class="chip-row">
+        <text class="result-chip">{{cards[1].chip}}</text>
+      </view>
+      <button class="action-btn" data-index="1" bindtap="onActionTap">合成稀有卡</button>
+    </view>
+
+    <view class="card card--gold">
+      <text class="card-badge">Moonlight Event</text>
+      <text class="card-title">月色欢钥 · 城市集章</text>
+      <text class="card-desc">结合地域切换、景点卡册和积分兑换，适用于文旅、会员体系和联名任务。</text>
+      <view class="info-row">
+        <view class="info-chip">已点亮 <text class="info-value">{{cards[2].city}}</text></view>
+        <view class="info-chip">积分 <text class="info-value">{{cards[2].score}}</text></view>
+      </view>
+      <view class="chip-row">
+        <text class="result-chip">{{cards[2].chip}}</text>
+      </view>
+      <button class="action-btn" data-index="2" bindtap="onActionTap">1 积分领取</button>
+    </view>
+
+    <view class="card card--spring">
+      <text class="card-badge">Travel Festival</text>
+      <text class="card-title">春场玩节</text>
+      <text class="card-desc">用自然渐变和呼吸感光晕降低营销压迫感，适合季节性专题。</text>
+      <view class="info-row">
+        <view class="info-chip">签到天数 <text class="info-value">{{cards[3].days}}</text></view>
+        <view class="info-chip">碎片 <text class="info-value">{{cards[3].leaf}}</text></view>
+      </view>
+      <view class="chip-row">
+        <text class="result-chip">{{cards[3].chip}}</text>
+      </view>
+      <button class="action-btn" data-index="3" bindtap="onActionTap">立即抽卡</button>
+    </view>
+
+    <view class="card card--dream">
+      <text class="card-badge">Daily Task</text>
+      <text class="card-title">更多主题 数造相待</text>
+      <text class="card-desc">主角插画加卡牌飞散，让任务系统更有情绪价值和收藏驱动力。</text>
+      <view class="info-row">
+        <view class="info-chip">主题数 <text class="info-value">{{cards[4].theme}}</text></view>
+        <view class="info-chip">热度 <text class="info-value">{{cards[4].heat}}</text></view>
+      </view>
+      <view class="chip-row">
+        <text class="result-chip">{{cards[4].chip}}</text>
+      </view>
+      <button class="action-btn" data-index="4" bindtap="onActionTap">开启主题集卡</button>
+    </view>
+
+    <view class="card card--pink">
+      <text class="card-badge">Petal Lucky Draw</text>
+      <text class="card-title">集卡瓜分千万</text>
+      <text class="card-desc">适合低学习成本但高传播效率的活动页，强调任务与奖池的即时反馈。</text>
+      <view class="info-row">
+        <view class="info-chip">任务次数 <text class="info-value">{{cards[5].task}}</text></view>
+        <view class="info-chip">奖池热度 <text class="info-value">{{cards[5].pool}}</text></view>
+      </view>
+      <view class="chip-row">
+        <text class="result-chip">{{cards[5].chip}}</text>
+      </view>
+      <button class="action-btn" data-index="5" bindtap="onActionTap">做任务得次数</button>
+    </view>
+  </scroll-view>
+
+  <view class="toast {{toastVisible ? 'toast--visible' : ''}}">
+    <text class="toast-title">{{toastTitle}}</text>
+    <text class="toast-body">{{toastBody}}</text>
+  </view>
+</view>

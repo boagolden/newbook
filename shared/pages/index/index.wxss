@@ -1,0 +1,290 @@
+.page {
+  min-height: 100vh;
+  padding: 28rpx 24rpx 40rpx;
+  background:
+    radial-gradient(circle at top left, rgba(255, 184, 231, 0.14), transparent 30%),
+    radial-gradient(circle at top right, rgba(242, 241, 141, 0.12), transparent 26%),
+    linear-gradient(180deg, #1a1a1a 0%, #101010 55%, #0b0b0b 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(20rpx);
+  opacity: 0.78;
+  pointer-events: none;
+}
+
+.orb-a {
+  width: 300rpx;
+  height: 300rpx;
+  right: -90rpx;
+  top: 90rpx;
+  background: rgba(242, 241, 141, 0.12);
+}
+
+.orb-b {
+  width: 260rpx;
+  height: 260rpx;
+  left: -70rpx;
+  top: 180rpx;
+  background: rgba(255, 184, 231, 0.12);
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16rpx;
+  align-items: center;
+}
+
+.pill {
+  padding: 0 22rpx;
+  height: 56rpx;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999rpx;
+  border: 1rpx solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: #f5f2ea;
+  font-size: 24rpx;
+}
+
+.pill--soft {
+  color: #fff7fa;
+  box-shadow: inset 0 0 0 1rpx rgba(255, 86, 134, 0.35);
+}
+
+.title-wrap {
+  margin-top: 28rpx;
+  position: relative;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 20rpx;
+  color: rgba(255, 255, 255, 0.56);
+  letter-spacing: 0.16em;
+  margin-bottom: 10rpx;
+}
+
+.title {
+  display: block;
+  font-size: 66rpx;
+  line-height: 0.98;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.title--accent {
+  color: #ffb8e7;
+  margin-top: 4rpx;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 16rpx;
+  margin-top: 24rpx;
+}
+
+.stat {
+  flex: 1;
+  padding: 18rpx 16rpx;
+  border-radius: 24rpx;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1rpx solid rgba(255, 255, 255, 0.12);
+}
+
+.stat-value {
+  display: block;
+  color: #f2f18d;
+  font-size: 34rpx;
+  font-weight: 800;
+}
+
+.stat-label {
+  display: block;
+  margin-top: 6rpx;
+  color: rgba(245, 242, 234, 0.72);
+  font-size: 22rpx;
+}
+
+.section-head {
+  position: relative;
+  z-index: 1;
+  margin-top: 26rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 14rpx;
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.section-desc {
+  font-size: 22rpx;
+  color: rgba(245, 242, 234, 0.68);
+}
+
+.card-list {
+  position: relative;
+  z-index: 1;
+  margin-top: 16rpx;
+  height: calc(100vh - 480rpx);
+}
+
+.card {
+  padding: 12rpx;
+  border-radius: 28rpx;
+  margin-bottom: 16rpx;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  border: 1rpx solid rgba(255, 255, 255, 0.12);
+}
+
+.phone-screen {
+  min-height: 376rpx;
+  border-radius: 22rpx;
+  padding: 22rpx 20rpx 18rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0 16rpx;
+  height: 34rpx;
+  border-radius: 999rpx;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.28);
+  color: rgba(56, 27, 0, 0.88);
+  font-size: 20rpx;
+  font-weight: 700;
+}
+
+.card-title {
+  margin-top: 16rpx;
+  font-size: 34rpx;
+  font-weight: 800;
+  line-height: 1.08;
+  color: #3a1f05;
+}
+
+.card-desc {
+  margin-top: 10rpx;
+  font-size: 22rpx;
+  line-height: 1.58;
+  color: rgba(60, 33, 8, 0.76);
+}
+
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rpx;
+  margin-top: 14rpx;
+}
+
+.info-chip,
+.result-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44rpx;
+  padding: 0 14rpx;
+  border-radius: 999rpx;
+  background: rgba(255, 255, 255, 0.3);
+  color: rgba(56, 27, 0, 0.84);
+  font-size: 20rpx;
+  font-weight: 600;
+}
+
+.info-value {
+  margin-left: 8rpx;
+  font-size: 22rpx;
+  font-weight: 800;
+}
+
+.chip-row {
+  margin-top: 10rpx;
+}
+
+.action-btn {
+  margin-top: 14rpx;
+  width: 100%;
+  height: 76rpx;
+  border-radius: 999rpx;
+  line-height: 76rpx;
+  text-align: center;
+  background: linear-gradient(180deg, #ff8f62, #ff5f47);
+  color: #fff8f3;
+  font-size: 28rpx;
+  font-weight: 800;
+}
+
+.card--warm .phone-screen {
+  background: linear-gradient(180deg, #ffe2b5 0%, #ffebc9 40%, #fff0dc 100%);
+}
+
+.card--pearl .phone-screen {
+  background: linear-gradient(180deg, #ffe8da 0%, #fff3d8 42%, #ffe7cd 100%);
+}
+
+.card--gold .phone-screen {
+  background: linear-gradient(180deg, #fff2c5 0%, #f8e79a 35%, #ffeac1 100%);
+}
+
+.card--spring .phone-screen {
+  background: linear-gradient(180deg, #7ac7ff 0%, #a8f1d0 54%, #d3fcd7 100%);
+}
+
+.card--dream .phone-screen {
+  background: linear-gradient(180deg, #f5f9c2 0%, #ffe9d5 48%, #ffd8ab 100%);
+}
+
+.card--pink .phone-screen {
+  background: linear-gradient(180deg, #fff6fb 0%, #ffd1e8 45%, #ffc8c3 100%);
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(24rpx + env(safe-area-inset-bottom));
+  transform: translate(-50%, 140%);
+  opacity: 0;
+  width: calc(100% - 48rpx);
+  max-width: 640rpx;
+  padding: 24rpx 26rpx;
+  border-radius: 24rpx;
+  background: rgba(24, 24, 24, 0.94);
+  border: 1rpx solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.28s ease, opacity 0.28s ease;
+}
+
+.toast--visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+.toast-title {
+  display: block;
+  color: #fff3d8;
+  font-size: 26rpx;
+  font-weight: 800;
+}
+
+.toast-body {
+  display: block;
+  margin-top: 8rpx;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 22rpx;
+  line-height: 1.5;
+}
