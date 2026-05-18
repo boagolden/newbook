@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>集卡抽奖v1.0</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,700&family=Noto+Sans+SC:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-topline">
+      </div>
+
+      <div class="hero-copy">
+        <h1>
+          <span class="title-cn">互动玩法类</span>
+          <span class="title-script">Design</span>
+          <span class="title-cn title-cn--accent">集卡抽奖运营设计</span>
+        </h1>
+      </div>
+
+      <div class="hero-stats">
+        <article>
+          <strong>06</strong>
+          <span>精选案例模块</span>
+        </article>
+        <article>
+          <strong>3s</strong>
+          <span>首屏强记忆点</span>
+        </article>
+        <article>
+          <strong>Neo</strong>
+          <span>糖果光感视觉</span>
+        </article>
+      </div>
+    </header>
+
+    <main>
+      <section class="showcase">
+        <div class="section-heading">
+        </div>
+
+        <div class="phone-grid">
+          <article class="phone-card phone-card--warm">
+            <div class="phone-screen">
+              <span class="screen-badge">618 Campaign</span>
+              <h3>快乐集卡 赢 1888 元</h3>
+              <p>盲盒抽卡、签到加速、大奖触发，强化活动节奏与按钮冲动感。</p>
+              <div class="sim-panel">
+                <span>剩余次数 <strong data-field="tries">3</strong></span>
+                <span>幸运值 <strong data-field="luck">68</strong></span>
+              </div>
+              <div class="card-stack">
+                <span>福</span>
+                <span>运</span>
+                <span>奖</span>
+              </div>
+              <button
+                class="action-button"
+                data-scenario="draw"
+                data-title="快乐集卡"
+                data-result="抽中稀有金卡"
+              >立即抽卡</button>
+              <div class="result-chip" data-chip>等待抽卡</div>
+            </div>
+          </article>
+
+          <article class="phone-card phone-card--pearl">
+            <div class="phone-screen">
+              <span class="screen-badge">Festival Series</span>
+              <h3>五福和 TA 的朋友们</h3>
+              <p>漂浮卡面、角色插画与高亮按钮，适合春节、周年庆和品牌联动玩法。</p>
+              <div class="sim-panel">
+                <span>福卡进度 <strong data-field="progress">2/5</strong></span>
+                <span>好友助力 <strong data-field="assist">12</strong></span>
+              </div>
+              <div class="float-orbs">
+                <i></i><i></i><i></i>
+              </div>
+              <button
+                class="action-button"
+                data-scenario="merge"
+                data-title="五福玩法"
+                data-result="合成成功"
+              >合成稀有卡</button>
+              <div class="result-chip" data-chip>待合成</div>
+            </div>
+          </article>
+
+          <article class="phone-card phone-card--gold">
+            <div class="phone-screen">
+              <span class="screen-badge">Moonlight Event</span>
+              <h3>月色欢钥 · 城市集章</h3>
+              <p>结合地域切换、景点卡册与积分兑换，适用于文旅、会员体系和联名任务。</p>
+              <div class="sim-panel">
+                <span>已点亮 <strong data-field="city">4 城</strong></span>
+                <span>积分 <strong data-field="score">1260</strong></span>
+              </div>
+              <div class="city-frame"></div>
+              <button
+                class="action-button"
+                data-scenario="claim"
+                data-title="城市集章"
+                data-result="领取成功"
+              >1 积分领取</button>
+              <div class="result-chip" data-chip>待领取</div>
+            </div>
+          </article>
+
+          <article class="phone-card phone-card--spring">
+            <div class="phone-screen">
+              <span class="screen-badge">Travel Festival</span>
+              <h3>春场玩节</h3>
+              <p>用自然渐变和呼吸感光晕降低营销压迫感，适合季节性大促专题。</p>
+              <div class="sim-panel">
+                <span>签到天数 <strong data-field="days">5</strong></span>
+                <span>解锁碎片 <strong data-field="leaf">9</strong></span>
+              </div>
+              <div class="tree-badge"></div>
+              <button
+                class="action-button"
+                data-scenario="spring"
+                data-title="春场玩节"
+                data-result="掉落新碎片"
+              >立即抽卡</button>
+              <div class="result-chip" data-chip>待解锁</div>
+            </div>
+          </article>
+
+          <article class="phone-card phone-card--dream">
+            <div class="phone-screen">
+              <span class="screen-badge">Daily Task</span>
+              <h3>更多主题 数造相待</h3>
+              <p>主角插画加卡牌飞散，让任务系统拥有更强情绪价值和收藏驱动力。</p>
+              <div class="sim-panel">
+                <span>主题数 <strong data-field="theme">8</strong></span>
+                <span>热度 <strong data-field="heat">89</strong></span>
+              </div>
+              <div class="ribbon-wave"></div>
+              <button
+                class="action-button"
+                data-scenario="theme"
+                data-title="主题集卡"
+                data-result="新主题开启"
+              >开启主题集卡</button>
+              <div class="result-chip" data-chip>未开启</div>
+            </div>
+          </article>
+
+          <article class="phone-card phone-card--pink">
+            <div class="phone-screen">
+              <span class="screen-badge">Petal Lucky Draw</span>
+              <h3>集卡瓜分千万</h3>
+              <p>以单一主花元素放大识别度，适合低学习成本但高传播效率的运营页。</p>
+              <div class="sim-panel">
+                <span>任务次数 <strong data-field="task">2</strong></span>
+                <span>奖池热度 <strong data-field="pool">91</strong></span>
+              </div>
+              <div class="petal-core"></div>
+              <button
+                class="action-button"
+                data-scenario="task"
+                data-title="任务奖池"
+                data-result="获得新次数"
+              >做任务得次数</button>
+              <div class="result-chip" data-chip>待完成</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="toast" id="toast">
+    <div class="toast-title" id="toastTitle">互动结果</div>
+    <div class="toast-body" id="toastBody">模拟数据已更新</div>
+  </div>
+
+  <script src="shared/activity-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
